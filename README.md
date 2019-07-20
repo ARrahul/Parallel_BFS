@@ -13,4 +13,4 @@ In their paper, they present a different data structure to represent graphs in w
 ![](images/low-min.jpg)
 ### Algorithm
 ![](images/1.jpg)
-![](images/2.jpg)
+![](images/2.png)
