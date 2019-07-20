@@ -1,3 +1,12 @@
+## Project Installation
+1.Install cuda by using the link [a link](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
+2.Clone the project
+3.In the project folder go to *src* folder
+4.Compile:
+nvcc -o a.out bfs.cu
+5.Run:
+./a.out
+
 ## Implementing Breadth First Search in CUDA
 
 Graph algorithms are  a very common requirement in several problem domains including several scientific and engineering applications, and they mostly involve  processing large graphs having millions of vertices. In this post I’ll describe an implementation of a popular Graph Algorithm (BFS) on the GPU using CUDA.
