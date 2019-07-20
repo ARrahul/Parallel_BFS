@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## Implementing Breadth First Search in CUDA
 
-You can use the [editor on GitHub](https://github.com/ARrahul/Parallel_BFS/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Graph algorithms are  a very common requirement in several problem domains including several scientific and engineering applications, and they mostly involve  processing large graphs having millions of vertices. In this post I’ll describe an implementation of a popular Graph Algorithm (BFS) on the GPU using CUDA.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Bfs intro and implementation
+Breadth First Search is a well known Graph Traversal Algorithm which makes use of a queue as its main data structure. In this approach we should  traverse from a selected node (source or starting node) and traverse the graph in the form of layers implying we need to keep exploring the neighboring nodes to the currently processed node. A direct implementation of the traditional BFS algorithm on the GPU may not be possible, since CUDA has a restrictive programming model and is tricky to use as well.
 
-### Markdown
+Instead of the traditional implementation of the BFS algorithm using a queue and Adjacency Matrix/List as graph representations, I’ve implemented a variation of the BFS Algorithm as proposed by P Harish and PJ Narayan in their paper Accelerating large graph algorithms on the GPU using CUDA.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+In their paper, they present a different data structure to represent graphs in what is called a compact adjacency list form. In this structure, vertices of the graph are present in the array  Va. Another array  Ea of adjacency lists stores the edge vertices for all the vertices in the graph, such that each entry in the Vertex Array  Va refers to the starting index of its adjacent neighboring vertices in  Ea (Each entry of  Ea refers to a vertex in the vertex array Va ).
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ARrahul/Parallel_BFS/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Refer to the below picture for clarity:
+### Algorithm
