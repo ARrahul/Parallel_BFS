@@ -3,9 +3,9 @@
 2. Clone the project
 3. In the project folder go to *src* folder
 4. Compile:
-5. nvcc -o a.out bfs.cu
+nvcc -o a.out bfs.cu
 6. Run:
-7. ./a.out
+./a.out
 
 ## Implementing Breadth First Search in CUDA
 
