@@ -10,4 +10,5 @@ Instead of the traditional implementation of the BFS algorithm using a queue and
 In their paper, they present a different data structure to represent graphs in what is called a compact adjacency list form. In this structure, vertices of the graph are present in the array  Va. Another array  Ea of adjacency lists stores the edge vertices for all the vertices in the graph, such that each entry in the Vertex Array  Va refers to the starting index of its adjacent neighboring vertices in  Ea (Each entry of  Ea refers to a vertex in the vertex array Va ).
 
 ### Refer to the below picture for clarity:
+![](images/low-min.jpg)
 ### Algorithm
