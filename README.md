@@ -1,6 +1,6 @@
 ## Project Installation
-1.Install cuda by using the link [a link](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
-2.Clone the project
+1 Install cuda by using the link [a link](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
+2 Clone the project
 3.In the project folder go to *src* folder
 4.Compile:
 nvcc -o a.out bfs.cu
